@@ -13,11 +13,10 @@ except NameError:
     # PY3
     name4 = input("Enter fourth name: ")
 
-
+print("{:>30}{:>30}{:>30}{:>30}".format("1st Star", "2nd Star", "Goalie", "4th line plug"))
+print("{:>30}{:>30}{:>30}{:>30}".format("------", "-------", "-----", "------"))
 print("{:>30}{:>30}{:>30}{:>30}".format(name1, name2, name3, name4))
+print("\n")
 
-#print("{:>30}".format(name1))
-#print("{:>30}".format(name2))
-#print("{:>30}".format(name3))
-#print("{:>30}".format(name4)
+
 
