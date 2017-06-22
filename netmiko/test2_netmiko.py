@@ -37,30 +37,7 @@ def main():
         print("#" * 80)
         print()
 
-
 if __name__ == "__main__":
     main()
 
-    for a_device in (pynet_rtr1, pynet_srx):
-        net_connect = ConnectHandler(**a_device)
-        print("Current Prompt: " + net_connect.find_prompt())
 
-        show_ver = net_connect.send_command("show version")
-        print()
-        print('#' * 80)
-        print(show_ver)
-        print('#' * 80)
-        print()
-
-        if 'cisco' in a_device['device_type']:
-            cmd = "show run"
-        elif 'juniper' in a_device['device_type']:
-            cmd = "show configuration"
-
-        show_run = net_connect.send_command(cmd)
-        filename = net_connect.base_prompt + ".txt"
-        print("Save show run output: {}\n".format(filename))
-        save_file(filename, show_run)
-
-if __name__ == "__main__":
-    main()
